@@ -18,14 +18,10 @@ jobs:
             env:
                 STEPS_CONTEXT: ${{toJson(steps)}}
             run: echo "$STEPS_CONTEXT"
-          - name: Demp runner context
+          - name: Dump runner context
             env:
               RUNNER_CONTEXT: ${{ toJson(runner)}}
             run: echo "$RUNNER_CONTEXT"
-          - name: Data Strategy context
-            env:
-              STRATEGY_CONTEXT: ${{ toJson(strategy)}}
-            run: echo "$STRATEGY_CONTEXT"
           - name: Dump secret context
             env: 
               SECRET_CONTEXT: ${{ toJson(secrets) }}
